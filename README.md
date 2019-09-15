@@ -41,4 +41,4 @@ Face detection application with MVVM architecture and Repository pattern
 * DRY (Don’t Repeat Yourself)
 * SRP: “Single Responsibility Principle” (part of SOLID principles)
 * "Separation of concerns"
-* Dependency inversion principle.
+* "Dependency inversion principle"
