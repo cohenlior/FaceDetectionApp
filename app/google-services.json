@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "107670502298",
+    "firebase_url": "https://facedetactionapp.firebaseio.com",
+    "project_id": "facedetactionapp",
+    "storage_bucket": "facedetactionapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107670502298:android:8948506d26d52de0fcd823",
+        "android_client_info": {
+          "package_name": "com.lior.facedetectionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107670502298-1kn4527hspn22is83951t3bvnvo1a0k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiDH8Zg5jPWtH1r5GY-EmehLLhbLiypO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107670502298-1kn4527hspn22is83951t3bvnvo1a0k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

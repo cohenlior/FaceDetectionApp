@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FaceDetectionApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_detect">Detect</string>
+    <string name="detect_result_title">Detection results</string>
+    <string name="detect_result_msg">Number of faces detected: %d out of %d photos</string>
+    <string name="detection_complete">Detection complete</string>
+    <string name="detecting_faces">Detecting faces</string>
+    <string name="detection_in_progress">Detection in progress</string>
+    <string name="disable_button">Disable button</string>
+    <string name="faces_detected">Faces detected</string>
+    <string name="total_images">Total images</string>
+    <string name="require_storage_permission">Storage permission required to access device directory</string>
+</resources>

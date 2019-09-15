@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.lior.facedetectionapp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //FireBase ML kit face detection
+    implementation "com.google.firebase:firebase-ml-vision:23.0.0"
+    implementation 'com.google.firebase:firebase-ml-vision-face-model:18.0.0'
+
+    //Core
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+    implementation "androidx.appcompat:appcompat:$version_appcompat"
+    implementation "androidx.core:core-ktx:$version_ktx"
+    implementation "com.google.android.material:material:$version_material"
+    implementation "androidx.exifinterface:exifinterface:1.1.0-beta01"
+
+    // Constraint Layout
+    implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
+
+    //Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$version_picasso"
+
+    //RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$version_recyclerview"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:$version_lifecycle_extensions"
+
+    //Rx
+    implementation "io.reactivex.rxjava2:rxjava:$version_rx_java"
+    implementation "io.reactivex.rxjava2:rxandroid:$version_rx_android"
+    implementation "io.reactivex.rxjava2:rxkotlin:$version_rx_kotlin"
+
+    //Tests
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

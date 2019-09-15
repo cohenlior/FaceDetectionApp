@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.lior.facedetectionapp.ui.activity.MainActivity">
+    <item android:id="@+id/action_detect"
+          android:title="@string/action_detect"
+          android:orderInCategory="100"
+          app:showAsAction="never"/>
+</menu>
