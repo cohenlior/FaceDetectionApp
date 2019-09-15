@@ -78,7 +78,10 @@ class FaceDetectionRepository(private val context: Context) {
     fun searchFacesProcess() {
         Log.d("FaceDetectionService", "Search faces process started")
 
-        val size = imageGalleryList.value!!.size
+        val size = imageGalleryList.value?.size
+        if (size == null || size == 0){
+            return
+        }
 
         val options = FirebaseVisionFaceDetectorOptions.Builder()
             .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
@@ -93,7 +96,7 @@ class FaceDetectionRepository(private val context: Context) {
 
         composite.add(
             rxImageDetector.facesSubject
-                .subscribeOn(Schedulers.io())
+                .subscribeOn(Schedulers.computation())
                 .subscribeBy(onNext = { imageGallery ->
                     if (imageGallery.hasFaces) {
                         facesList.add(imageGallery)
@@ -106,7 +109,7 @@ class FaceDetectionRepository(private val context: Context) {
         )
 
         composite.add(Observable.fromCallable { detectInBackground(rxImageDetector) }
-            .subscribeOn(Schedulers.io())
+            .subscribeOn(Schedulers.computation())
             .subscribe()
         )
     }
