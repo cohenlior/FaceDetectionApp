@@ -32,6 +32,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation 'com.google.android.gms:play-services-vision:18.0.0'
+
     //FireBase ML kit face detection
     implementation "com.google.firebase:firebase-ml-vision:23.0.0"
     implementation 'com.google.firebase:firebase-ml-vision-face-model:18.0.0'
@@ -63,6 +65,10 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$version_rx_java"
     implementation "io.reactivex.rxjava2:rxandroid:$version_rx_android"
     implementation "io.reactivex.rxjava2:rxkotlin:$version_rx_kotlin"
+
+    // Coroutines for getting off the UI thread
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines"
 
     //Tests
     testImplementation 'junit:junit:4.12'
