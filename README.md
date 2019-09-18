@@ -4,7 +4,7 @@ Face detection application with MVVM architecture and Repository pattern
 
 * AndroidX packages.
 * Data binding.
-* Rx Java/Android for background operations.
+* Rx Java/Android for background operations. (Kotlin coroutines in additional branches)
 
 
 ## The app has following packages:
