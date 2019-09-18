@@ -7,7 +7,7 @@ import com.lior.facedetectionapp.domain.ImageGallery
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.*
 
-suspend fun detectImages(
+suspend fun detectImagesSequential(
     picasso: Picasso,
     imageGalleryList: List<ImageGallery>,
     faceDetector: FaceDetector,
