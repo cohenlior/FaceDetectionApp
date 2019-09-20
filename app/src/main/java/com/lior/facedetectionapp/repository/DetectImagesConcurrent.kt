@@ -22,7 +22,7 @@ suspend fun detectImagesConcurrent(
         launch {
             val bitmap: Bitmap = picasso.load(image.uri).get()
             val faces = faceDetector.detect(frame.setBitmap(bitmap).build())
-            if (faces.size() >= 1) image.hasFace = true
+            image.hasFace = faces.size() >= 1
             channel.send(image)
         }
     }
