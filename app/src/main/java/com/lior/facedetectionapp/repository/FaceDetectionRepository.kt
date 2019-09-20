@@ -95,7 +95,7 @@ class FaceDetectionRepository(private val context: Context) {
                 .build()
 
         viewModelScope.launch(Dispatchers.Default) {
-            detectImagesSequential(
+            detectImagesConcurrent(
                 Picasso.get(),
                 list,
                 detector,
